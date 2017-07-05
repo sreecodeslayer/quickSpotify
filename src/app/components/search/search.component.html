@@ -11,7 +11,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="well results">
-					<h3><a routerLink="/artist/res.id">{{res.name}}</a></h3>
+					<h3><a routerLink="/artist/{{res.id}}">{{res.name}}</a></h3>
 					<div>
 						<strong>Genres:</strong><span *ngFor="let g of res.genres">{{g}}</span>
 					</div>
