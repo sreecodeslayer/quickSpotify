@@ -15,7 +15,7 @@
 						<div *ngIf="album.images.length > 0" class="text-center">
 							<img src="{{album.images[0].url}}" class="album-thumb img-thumbnail">
 							<label class="lead"><strong>{{album.name}}</strong></label>
-							<a class="btn btn-default btn-block">Album details</a>
+							<a class="btn btn-default btn-block" routerLink="/album/{{album.id}}">Album details</a>
 
 						</div>
 					</div>

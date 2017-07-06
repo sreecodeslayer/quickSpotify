@@ -19,7 +19,7 @@ transition: height 0.5s;
 }
 
 .artist-album .well{
-margin-bottom:20px;
+margin-bottom:30px;
 overflow:hidden;
 
 }
@@ -33,7 +33,10 @@ border : #666 1px solid;
 }
 
 .album-thumb{
-width: 100%;
+width: 75%;
+height: 75%;
+float: left;
+border-radius: 1rem;
 }
 
 .main{

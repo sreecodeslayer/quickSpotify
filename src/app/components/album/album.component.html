@@ -1,0 +1,21 @@
+<div class="album jumbotran" *ngIf="album">
+	<div class="row">
+		<div class="col-md-4">
+			<div *ngIf="album.images.length > 0">
+				<img src="{{album.images[0].url}}" class="album-thumb">
+			</div>
+		</div>
+		<div class="col-md-8">
+			<h3 *ngIf="album.artists.length > 0" class="lead text-info">
+				<span *ngFor="let artist of album.artists">{{ artist.name }}</span>
+			</h3>
+			<h4 class="text-danger">Album : {{ album.name }}</h4>
+			<span><label>Release Date: {{ album.release_date }}</label> | <label>Label: {{ album.label }}</label></span><br>
+			<a class="btn btn-info btn-sm" href="{{ album.external_urls.spotify }}">View on Spotify</a>
+		</div>
+	</div>
+	<hr>
+	<div class="col-md-4 col-md-offset-6 well" *ngIf="album.tracks.items.length > 0">
+		<h4 *ngFor="let track of album.tracks.items">{{track.track_number}}. {{track.name}}</h4>
+	</div>
+</div>
